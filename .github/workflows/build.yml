@@ -23,10 +23,10 @@ jobs:
           rake test
       - name: gem build
         run: | 
-          gem build inspec_tools.gemspec
+          gem build heimdall_tools.gemspec
       - name: gem install
         run: |
-          gem install inspec_tools
+          gem install heimdall_tools
       - name: run
         run: |
           inspec_tools
