@@ -29,7 +29,7 @@ jobs:
           gem install heimdall_tools
       - name: run
         run: |
-          inspec_tools
+          heimdall_tools
         env:
           CI: true
         
