@@ -1,5 +1,7 @@
 # HeimdallTools
 
+![](https://github.com/djhaynes/heimdall-tools/workflows/Heimdall%20Tools%20Workflow/badge.svg)
+
 HeimdallTools supplies several methods to convert output from various tools to "Heimdall Data Format"(HDF) format to be viewable in Heimdall. The converters in version 1.1.1 are from:
 
 * __sonarqube_mapper__ - open-source static code analysis tool
