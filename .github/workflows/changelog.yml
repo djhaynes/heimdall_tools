@@ -20,9 +20,9 @@ jobs:
       - name: run changelog-generator
         run: |
           github_changelog_generator -u djhaynes -p heimdall_tools
-      - name: commit and push changes 
-        run: |
-          git commit -m "Updating changelog" CHANGELOG.md
-          git push
+#      - name: commit and push changes 
+#        run: |
+#          git commit -m "Updating changelog" CHANGELOG.md
+#          git push
         env:
           CI: true
