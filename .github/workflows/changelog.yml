@@ -1,0 +1,34 @@
+name: Changelog Generator
+on:
+  push:
+    # branches to consider in the event; optional, defaults to all
+    branches:
+      - master
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+        #os: [windows-latest, windows-2019, windows-2016, ubuntu-latest, ubuntu-18.04, ubuntu-16.04, macOS-latest, macOS-10.14]
+        ruby: [2.4]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Ruby ${{ matrix.ruby }} on ${{ matrix.os }}
+        uses: actions/setup-ruby@v1
+      - name: install changelog-generator
+        run: |
+          gem install github_changelog_generator
+      - name: run changelog-generator
+        run: |
+          github_changelog_generator -u djhaynes -p heimdall_tools
+      - name: cat changelog
+        run: |
+          cat CHANGELOG.md
+      - name: commit and push changes 
+        run: |
+          git commit -m "Updating changelog" CHANGELOG.md
+          git push
+        env:
+          CI: true
