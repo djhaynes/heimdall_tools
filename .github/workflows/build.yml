@@ -26,7 +26,6 @@ jobs:
           gem install rubocop
       - name: rubocop
         run: |
-          #rubocop
       - name: gem build
         run: | 
           gem build heimdall_tools.gemspec
