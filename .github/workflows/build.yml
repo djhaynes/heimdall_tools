@@ -1,4 +1,4 @@
-name: Heimdall Tools Workflow
+name: heimdall_tools
 on:
   push:
   pull_request:
@@ -12,25 +12,29 @@ jobs:
         #os: [windows-latest, windows-2019, windows-2016, ubuntu-latest, ubuntu-18.04, ubuntu-16.04, macOS-latest, macOS-10.14]
         ruby: [2.4]
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout heimdall_tools
+        uses: actions/checkout@v1
       - name: Use Ruby ${{ matrix.ruby }} on ${{ matrix.os }}
         uses: actions/setup-ruby@v1
-      - name: bundle install
+      - name: Run bundle install
         run: |
           bundle install
-      - name: rake test
+      - name: Run rake test
         run: |
           rake test
-      - name: install rubocop
-        run: |
-          gem install rubocop
-      - name: gem build
+#      - name: Install rubocop
+#        run: |
+#          gem install rubocop
+#      - name: Run rubocop
+#        run: |
+#          rubocop
+      - name: Build heimdall_tools gem 
         run: | 
           gem build heimdall_tools.gemspec
-      - name: gem install
+      - name: Install heimdall_tools gem
         run: |
           gem install heimdall_tools
-      - name: run
+      - name: Run heimdall_tools
         run: |
           heimdall_tools
         env:
