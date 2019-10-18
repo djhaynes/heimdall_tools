@@ -31,5 +31,6 @@ jobs:
           force-add: 'true'
         env:
           CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
