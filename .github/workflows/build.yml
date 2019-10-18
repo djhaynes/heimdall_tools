@@ -4,7 +4,7 @@ on:
   pull_request:
 jobs:
   test:
-    name: Test
+    name: Build and test heimdall_tools
     runs-on: ubuntu-latest
     steps:
       - name: Checkout heimdall_tools
