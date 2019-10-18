@@ -31,7 +31,11 @@ jobs:
           gem install heimdall_tools
       - name: Run heimdall_tools
         run: |
-          heimdall_tools
+          heimdall_tools  
+      - uses: anothrNick/github-tag-action@master
+      - uses: ./.github/actions/version
+      - uses: ./.github/actions/changelog
+      - uses: toolmantim/release-drafter@v5.2.0
         env:
           CI: true
         
