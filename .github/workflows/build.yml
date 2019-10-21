@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout heimdall_tools
-        uses: actions/checkout@v1
+        uses: actions/checkout@master
       - name: Setup ruby
         uses: actions/setup-ruby@v1
       - name: Run bundle install
@@ -33,8 +33,6 @@ jobs:
         run: |
           heimdall_tools  
       - uses: anothrNick/github-tag-action@master
-      - name: Setup ruby
-        uses: actions/setup-ruby@v1
       - name: Install github_changelog_generator
         run: |
           gem install github_changelog_generator
