@@ -33,6 +33,8 @@ jobs:
         run: |
           heimdall_tools  
       - uses: anothrNick/github-tag-action@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install github_changelog_generator
         run: |
           gem install github_changelog_generator
