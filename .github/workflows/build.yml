@@ -33,13 +33,32 @@ jobs:
         run: |
           heimdall_tools  
       - uses: anothrNick/github-tag-action@master
-      - uses: ./.github/actions/version
+      - name: Setup ruby
+        uses: actions/setup-ruby@v1
+      - name: Install github_changelog_generator
+        run: |
+          gem install github_changelog_generator
+      - name: Run github_changelog_generator
+        run: |
+          git pull origin master
+          export CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          github_changelog_generator -u djhaynes -p heimdall_tools
+      - name: Get information for VERSION.md
+        run: |
+          git pull origin master
+          echo "**Release:** " > VERSION.md
+          git describe --tags $(git rev-list --tags --max-count=1) >> VERSION.md
+          echo "<br><br>**Date:** " >> VERSION.md
+          git show -s --format=%ci $(git rev-list --tags --max-count=1) >> VERSION.md
+          echo "<br><br>**Commit:** " >> VERSION.md
+          git rev-list --tags --max-count=1 >> VERSION.md
+      - name: Commit and push changes to CHANGELOG.md and VERSION.md
+        uses: github-actions-x/commit@v2.1
         with:
-          token: ${{secrets.GITHUB_TOKEN}} 
-      - uses: ./.github/actions/changelog
-        with:
-          token: ${{secrets.GITHUB_TOKEN}} 
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'master'
+          commit-message: 'Publish changelog and version information'
+          force-add: 'true'
       - uses: toolmantim/release-drafter@v5.2.0
         env:
           CI: true
-        
