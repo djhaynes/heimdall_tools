@@ -1,5 +1,8 @@
 # Change Log
 
+## [v1.34.3](https://github.com/djhaynes/heimdall_tools/tree/v1.34.3) (2019-10-21)
+[Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/v1.34.2...v1.34.3)
+
 ## [v1.34.2](https://github.com/djhaynes/heimdall_tools/tree/v1.34.2) (2019-10-21)
 [Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/v1.34.1...v1.34.2)
 
