@@ -1,5 +1,5 @@
-name-template: v$PREVIOUS_TAG
-tag-template: v$NEXT_PATCH_VERSION
+name-template: 'v$NEXT_PATCH_VERSION 🌈'
+tag-template: 'v$NEXT_PATCH_VERSION'
 categories:
   - title: '🚀 Features'
     labels:
@@ -15,5 +15,5 @@ categories:
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 template: |
   ## Changes
-  
+
   $CHANGES
