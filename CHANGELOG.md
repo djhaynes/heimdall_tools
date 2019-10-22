@@ -1,10 +1,7 @@
 # Change Log
 
-## [v](https://github.com/djhaynes/heimdall_tools/tree/v) (2019-10-21)
-[Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/untagged-f87ce7a02775be415053...v)
-
-## [untagged-f87ce7a02775be415053](https://github.com/djhaynes/heimdall_tools/tree/untagged-f87ce7a02775be415053) (2019-10-21)
-[Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/v1.34.4...untagged-f87ce7a02775be415053)
+## [v1.34.5](https://github.com/djhaynes/heimdall_tools/tree/v1.34.5) (2019-10-22)
+[Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/v1.34.4...v1.34.5)
 
 ## [v1.34.4](https://github.com/djhaynes/heimdall_tools/tree/v1.34.4) (2019-10-21)
 [Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/v1.34.3...v1.34.4)
@@ -16,10 +13,7 @@
 [Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/v1.34.1...v1.34.2)
 
 ## [v1.34.1](https://github.com/djhaynes/heimdall_tools/tree/v1.34.1) (2019-10-21)
-[Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/1.32.0...v1.34.1)
-
-## [1.32.0](https://github.com/djhaynes/heimdall_tools/tree/1.32.0) (2019-10-21)
-[Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/1.31.0...1.32.0)
+[Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/1.31.0...v1.34.1)
 
 ## [1.31.0](https://github.com/djhaynes/heimdall_tools/tree/1.31.0) (2019-10-21)
 [Full Changelog](https://github.com/djhaynes/heimdall_tools/compare/1.30.0...1.31.0)
